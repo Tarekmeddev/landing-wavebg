@@ -266,7 +266,7 @@ body{
     .about .container .image svg {
         left: 50%;
         transform: translateX(-50%);
-        Width:200px;
+        Width:100px;
     }
 }
 /* ------------------- end about styling section --------------------- */
