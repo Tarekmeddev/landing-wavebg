@@ -13,7 +13,7 @@
 body{
     font-family: 'Open Sans', sans-serif;
     background-color: rgb(255, 255, 255);
-    color: #fff;
+    color: #000000;
     height: 5000px;
 }
 .container{
@@ -35,9 +35,11 @@ body{
         width: 1170px;
     }
 }
+
+/* ----------------- start header styling section ----------------- */
 .header{
     width: 100%;
-    height: 100vh;
+    height:calc(100vh - 50px);
     position: relative;
     background-color: #0c43e9;
     overflow: hidden;
@@ -106,7 +108,6 @@ body{
         width: 100%;
         height: 100vh;
         background-color: #0c43e9;
-        z-index: 999;
         transition: .5s;
     }
     .navbar ul li:not(:last-child){
@@ -124,6 +125,7 @@ body{
     }
     .navbar .container .fa-bars:hover + ul {
         opacity: 1;
+        z-index: 999;
     }
 }
 .content{
@@ -159,3 +161,188 @@ body{
     text-transform: capitalize;
     font-weight: bold;
 }
+/* ------------------- end header styling section --------------------- */
+/* ------------------- start about styling section --------------------- */
+.about{
+    padding: 100px 0;
+}
+.about .container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about .container .text {
+    flex: 1;
+}
+.section-title{
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    font-size: 45px;
+    position: relative;
+}
+.section-title::after{
+    content: " ";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 150px;
+    height: 8px;
+   background-color: #0c43e9;
+   border-radius: 0 10px 10px 0;
+    animation: widthpls 2.5s ease-in-out infinite alternate;
+}
+@keyframes widthpls {
+    form{
+        width: 150px;
+    }
+    to{
+        width: 200px;
+    }
+}
+.about .container .text p{
+    line-height: 1.8;
+    font-size: 18px;
+    font-weight: 900;
+    color: #555;
+}
+.about .container .text ul{
+    margin: 30px 0;
+}
+.about .container .text li{
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--main-color);
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+.about .container .text li span{
+    color: #FFF;
+    font-weight: 900;
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 20px;
+}
+.about .container .text li span:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color:var(--main-color);
+    border-radius: 15px;
+    transform: rotate(45deg);
+    z-index: -99;
+}
+.about .container .image{
+    position: relative;
+    width: 400px;
+}
+.about .container .image img {
+    display: block;
+    z-index: 999;
+    width: 280px;
+    
+}
+.about .container .image svg {
+    position: absolute;
+    top:100px;
+    right:50px;
+    width:400px;
+    z-index: -10;
+}
+@media (max-width:767px) {
+    .about .container .image{
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    .about .container .image img {
+        margin: 0 auto;
+    }
+    .about .container .image svg {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+/* ------------------- end about styling section --------------------- */
+/* ------------------- start features styling section --------------------- */
+.feat{
+    background-color:#49a2e6;
+    padding: 60px 0;
+}
+.feat h1{
+    color: #FFF;
+}
+.feat h1::after{
+    background-color: #FFF;
+}
+.feat .mainbx{
+    margin-top:80px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.feat .mainbx .box{
+    width: calc(100%);
+    padding: 30px;
+    background-color: #Fff;
+    overflow: hidden;
+    transition: .5s;
+    border-radius: 10px;
+}
+.feat .mainbx .box h1{
+    transform: translateX(400px);
+    color: #555;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    width: 500px;
+    transition: .5s;
+}
+.feat .mainbx .box p{
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 900;
+    color: #333;
+    transition: .5s;
+}
+.feat .mainbx .box:hover {
+    background: rgb(18,54,92);
+background: linear-gradient(16deg, rgba(18,54,92,1) 0%, rgba(12,67,233,1) 47%, rgb(25, 68, 152) 100%);
+
+}
+.feat .mainbx .box:hover p {
+    color: #FFF;
+}
+.feat .mainbx .box:hover h1{
+    transform: translateX(-10px);
+    color: #FFF;
+}
+@media (min-width:992px) {
+    .feat .mainbx .box{
+        width: calc(100% / 2 - 30px);
+    }
+    .feat .mainbx .box h1{
+        transform: translateX(230px);
+    }
+}
+@media (min-width:1200px) {
+    .feat .mainbx .box{
+        width: calc(100% / 3 - 20px);
+    }
+    .feat .mainbx .box h1{
+        transform: translateX(150px);
+    }
+}
+@media (max-width:767px) {
+    .feat .mainbx .box h1{
+        transform: translateX(150px);
+    }
+}
+/* ------------------- end features styling section --------------------- */
+/* ------------------- start testomonial styling section --------------------- */
+/* ------------------- end tetsomonial styling section --------------------- */
