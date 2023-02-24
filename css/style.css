@@ -261,10 +261,12 @@ body{
     }
     .about .container .image img {
         margin: 0 auto;
+        Width:200px
     }
     .about .container .image svg {
         left: 50%;
         transform: translateX(-50%);
+        Width:200px;
     }
 }
 /* ------------------- end about styling section --------------------- */
